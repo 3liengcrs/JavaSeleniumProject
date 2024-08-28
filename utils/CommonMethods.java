@@ -18,7 +18,7 @@ public class CommonMethods extends BaseClass {
 	 * This method clears a text box and send the text parameter to it.
 	 * 
 	 * @param element
-	 * @param text
+	 * @param object
 	 */
 	public static void sendText(WebElement element, String text) {
 		element.clear();
@@ -250,6 +250,7 @@ public class CommonMethods extends BaseClass {
 	{
 		return getWaitObject().until(ExpectedConditions.visibilityOf(element));
 	}
+	
 	
 	
 	/**

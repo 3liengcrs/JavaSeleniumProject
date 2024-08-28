@@ -4,11 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class FacebookLoginCssSelector {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--disable-notifications");
 		WebDriver driver = new ChromeDriver();
 
         // Open Chrome browser and go to Facebook
@@ -35,6 +38,7 @@ public class FacebookLoginCssSelector {
         } else {
             System.out.println("Login failed");
         }
+        Thread.sleep(2000);
 
         // Close the browser
         driver.quit();
